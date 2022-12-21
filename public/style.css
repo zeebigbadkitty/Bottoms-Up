@@ -1,0 +1,17 @@
+body {
+  color: white;
+  background-image: linear-gradient(
+    to bottom,
+    #634628,
+    #7c5c3d,
+    #957452,
+    #af8c69,
+    #c9a580
+  );
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
