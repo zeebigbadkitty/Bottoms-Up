@@ -15,3 +15,9 @@ body {
   justify-content: center;
 }
 
+.main-btns {
+  padding-top: 20px;
+}
+.main-btns a {
+  text-decoration: none;
+}
