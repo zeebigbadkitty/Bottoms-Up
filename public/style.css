@@ -22,3 +22,11 @@ body {
   text-decoration: none;
   color:#634628;
 }
+.form{
+  margin-right: 50px;
+  margin-left:50px;
+}
+.form-inline{
+  margin-right: 50px;
+  margin-left:50px;
+}
