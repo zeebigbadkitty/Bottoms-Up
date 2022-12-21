@@ -27,27 +27,27 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/inventory/:id', async (req, res) => {
-  try {
-    const inventoryData = await Inventory.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+// router.get('/inventory/:id', async (req, res) => {
+//   try {
+//     const inventoryData = await Inventory.findByPk(req.params.id, {
+//       include: [
+//         {
+//           model: User,
+//           attributes: ['name'],
+//         },
+//       ],
+//     });
 
-    const inventory = inventoryData.get({ plain: true });
+//     const inventory = inventoryData.get({ plain: true });
 
-    res.render('inventory', {
-      ...inventory,
-      logged_in: req.session.logged_in
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.render('inventory', {
+//       ...inventory,
+//       logged_in: req.session.logged_in
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // Use withAuth middleware to prevent access to route
 // router.get('/profile', withAuth, async (req, res) => {
