@@ -19,7 +19,7 @@ Inventory.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // quantity max is ensuring user to order too much bottles at the same time
+    // quantity max is ensuring user not to order too much bottles at the same time
     quantity: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -27,7 +27,7 @@ Inventory.init(
       min: 0, 
     },
     price: {
-      type: DataTypes.DECIMAL,
+      type: DataTypes.DECIMAL(10,2),
       allowNull: false,
     },
     // use to send out alert to user when inventory is low

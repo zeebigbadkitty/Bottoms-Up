@@ -1,0 +1,51 @@
+[
+  {
+    "category": "Whiskey",
+    "product": "Black Label",
+    "quantity": 5,
+    "price": 99.99,
+    "par_min": 1
+  },
+  {
+    "category": "Vodka",
+    "product": "Absolut",
+    "quantity": 3,
+    "price": 26.49,
+    "par_min": 1
+  },
+  {
+    "category": "Tequila",
+    "product": "Silver Patron",
+    "quantity": 7,
+    "price": 40.99,
+    "par_min": 1
+  },
+  {
+    "category": "Rum",
+    "product": "Bacardi Superior Rum",
+    "quantity": 4,
+    "price": 23.99,
+    "par_min": 1
+  },
+  {
+    "category": "Gin",
+    "product": "Tanqueray Gin",
+    "quantity": 2,
+    "price": 34.99,
+    "par_min": 1
+  },
+  {
+    "category": "Brandy",
+    "product": "Ciroc Brandy VS",
+    "quantity": 6,
+    "price": 19.99,
+    "par_min": 1
+  },
+  {
+    "category": "Mescal",
+    "product": "Casamigos Joven Mezcal",
+    "quantity": 3,
+    "price": 64.99,
+    "par_min": 1
+  }
+]
