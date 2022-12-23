@@ -21,11 +21,17 @@ router.get('/', async (req, res) => {
     res.render('holdplease', { 
       layout: "main",
       inventory, 
-      logged_in: req.session.logged_in 
+      loggedIn: req.session.loggedIn 
     });
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.get("/register", (req, res) => {
+  res.render("register", {
+    layout: "main",
+  });
 });
 
 router.get('/inventory/:id', async (req, res) => {
@@ -43,7 +49,7 @@ router.get('/inventory/:id', async (req, res) => {
 
     res.render('inventory', {
       ...inventory,
-      logged_in: req.session.logged_in
+      loggedIn: req.session.loggedIn
     });
   } catch (err) {
     res.status(500).json(err);
@@ -72,7 +78,7 @@ router.get('/inventory/:id', async (req, res) => {
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     res.redirect('/');
 
   } else {

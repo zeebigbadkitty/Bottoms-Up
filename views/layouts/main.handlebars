@@ -26,16 +26,27 @@
           <li class="nav-item">
             <a class="nav-link" href="#">View Inventory</a>
           </li>
-          <li class="nav-item">
+         <li class="nav-item">
+            {{#if loggedIn}}
             <a class="nav-link" href="#">Item Management</a>
+           {{/if}}
           </li>
           <li class="nav-item">
+              {{#if loggedIn}}
             <a class="nav-link" href="#">Count</a>
+          {{/if}}
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="/login">Log In/Out</a>
+            {{#unless loggedIn}}
+              <a class="nav-link" href="/login">Log In</a>
+             {{/unless}}
             </li>
-          </li>
+          <li class="nav-item">
+              {{#if loggedIn}}
+              <a class="nav-link" id = "logout" href="/">Log Out</a>
+              {{/if}}
+            </li>
+          
         </ul>
       </div>
     </div>
@@ -76,3 +87,6 @@
   </footer>
 </body>
 </html>
+{{#if loggedIn}}
+<script src="/js/logout.js"></script>
+{{/if}}
