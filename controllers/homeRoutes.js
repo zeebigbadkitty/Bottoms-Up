@@ -9,17 +9,18 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['user_id'],
         },
       ],
     });
 
     // Serialize data so the template can read it
-    const Inventory = InventoryData.map((Inventory) => Inventory.get({ plain: true }));
+    const inventory = inventoryData.map((stock) => stock.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      Inventory, 
+    res.render('holdplease', { 
+      layout: "main",
+      inventory, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -73,10 +74,10 @@ router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/');
-    return;
-  }
 
-  res.render('login');
+  } else {
+    res.render("login", {});
+  }
 });
 
 module.exports = router;
