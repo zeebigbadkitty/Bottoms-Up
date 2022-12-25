@@ -1,0 +1,22 @@
+{{#each inventories as |inventory|}}
+<div class="my-1" style="border: 1px solid black;">
+  <ul>
+    <li>Category: {{inventory.category}}</li>
+    <li>Product: {{inventory.product}}</li>
+    <li>Retail Price: {{inventory.price}}</li>
+  </ul>
+  <div class="row mb-1">
+
+    <div class="col-md-8">
+    <input name="inventory-quantity" type="number" placeholder="{{inventory.quantity}}" class="form-input w-5px" id="new-quantity"/>
+    </div>
+
+    <div class="col-md-4">
+    <button class="btn btn-primary update-quantity" type="submit" data-id="{{inventory.id}}">Update</button>
+    </div>
+
+  </div>
+</div>
+{{/each}}
+
+<script src="/js/updateInventory.js"></script>
