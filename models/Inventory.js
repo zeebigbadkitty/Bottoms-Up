@@ -27,7 +27,7 @@ Inventory.init(
       min: 0, 
     },
     price: {
-      type: DataTypes.DECIMAL(10,2),
+      type: DataTypes.DECIMAL,
       allowNull: false,
     },
     // use to send out alert to user when inventory is low

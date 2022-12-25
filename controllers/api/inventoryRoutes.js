@@ -29,7 +29,8 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Update quantity based on id 
+
+// Update quantity based on inventory id 
 router.put("/:id", withAuth, async (req, res) => {
   try {
     const inventoryData = await Inventory.update(req.body, {

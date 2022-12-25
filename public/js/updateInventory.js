@@ -6,7 +6,6 @@ const updateInventory = async (event) => {
   // Collect data from user input
   const quantity = document.querySelector('#new-quantity').value.trim();
   const id = event.target.getAttribute('data-id');
-    console.log(quantity);
 
     const response = await fetch(`/api/inventory/${id}`, {
       method: 'PUT',

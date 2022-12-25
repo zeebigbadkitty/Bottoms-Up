@@ -24,11 +24,11 @@
             <a class="nav-link active" aria-current="page" href="#">Main</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">View Inventory</a>
+            <a class="nav-link" href="/api/inventory">View Inventory</a>
           </li>
          <li class="nav-item">
             {{#if loggedIn}}
-            <a class="nav-link" href="#">Item Management</a>
+            <a class="nav-link" href="/api/itemManagement">Item Management</a>
            {{/if}}
           </li>
           <li class="nav-item">
@@ -85,8 +85,10 @@
       © 2023 Copyright: Bottoms Up Distribution    </div>
     <!-- Copyright -->
   </footer>
-</body>
-</html>
+
 {{#if loggedIn}}
 <script src="/js/logout.js"></script>
 {{/if}}
+
+</body>
+</html>
