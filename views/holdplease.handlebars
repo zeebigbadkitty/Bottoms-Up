@@ -1,14 +1,49 @@
 <!--Body-->
+<div class="background-image">
   <div class="main-btns">
     <div class="container text center mt-20">
       <div class="row">
 
-        <button type="button" id = "view-inventory" class=" button btn btn-light btn-lg mb-4 p-6"><a href="/api/inventory">View Inventory</a></button>
+        {{!-- <button type="button" id = "view-inventory" class=" button btn btn-light btn-lg mb-4 p-6"><a href="/api/inventory">View Inventory</a></button>
 
         <button type="button" id = "item-management" class="button btn btn-light btn-lg mb-4 p-6"><a href="/api/itemManagement">Item Management</a></button>
 
-        <button type="button" id = 'count' class=" button btn btn-light btn-lg mb-4 p-6"><a href="/api/count">Count</a></button>
+        <button type="button" id = 'count' class=" button btn btn-light btn-lg mb-4 p-6"><a href="/api/count">Count</a></button> --}}
         
+        <section class="maincontainer">
+    <div class="card mb-4" id="projects">
+      <div class="card-image" id="card-image1">
+       
+      </div>
+      <button class="card-button">
+        <a href="/api/inventory">Click Here</a>
+      </button>
+      <h4>View Inventory</h4>
+    </div>
+  </section>
+
+  <section class="maincontainer">
+    <div class="card mb-4" id="projects">
+      <div class="card-image" id="card-image2">  
+      </div>
+      <button class="card-button">
+        <a href="/api/itemManagement">Click Here</a>
+      </button>
+      <h4>Item Management</h4>
+    </div>
+  </section>
+
+  <section class="maincontainer">
+    <div class="card mb-4" id="projects">
+      <div class="card-image" id="card-image3">
+      </div>
+      <button class="card-button">
+        <a href="/api/count">Click Here</a>
+      </button>
+      <h4>Count</h4>
+    </div>
+  </section>
       </div>
     </div>
   </div>
+</div>
