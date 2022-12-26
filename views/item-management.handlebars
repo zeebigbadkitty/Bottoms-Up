@@ -1,9 +1,12 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="/public/style.css">
+{{!-- I think we can left everything (all the comments out code) out since we already include in the main handlebars --}}
+
+{{!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../public/style.css"> --}}
 
 
 <!--Header-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+
+  {{!-- <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
 
       <a class="navbar-brand" href="#"><img src="/assets/logo3.png" width="100" height="100" class="d-inline-block align-top" alt="logo">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +33,7 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> --}}
 
   <!--Form Container-->
   <form class="form-inline">
@@ -43,32 +46,30 @@
     </select></form>
   <form class="form">
     <div class="form-row">
+
       <div class="form-group col-md-6">
         <label>Product Name:</label>
-        <input type="text" class="form-control" placeholder="Product Name">
+        <input type="text" id="product-name" class="form-control" placeholder="Product Name">
       </div>
+
       <div class="form-group col-md-6">
         <label>Quantity On Hand:</label>
         <input type="number" id="replyNumber" min="0" data-bind="value:replyNumber" class="form-control" placeholder="Enter Quantity">
       </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label>Product Price:</label>
-          <input type="number" class="form-control" placeholder="Enter Price">
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-              <label>Minimum PAR level:</label>
-              <input type="number" class="form-control" placeholder="Minimum Quantity">
-            </div>
 
+      <div class="form-group col-md-6">
+        <label>Product Price:</label>
+        <input type="number" id="product-price" class="form-control" placeholder="Enter Price">
+      </div>
 
-
-
+      <div class="form-group col-md-6">
+        <label>Minimum PAR level:</label>
+        <input type="number" id="product-par" class="form-control" placeholder="Minimum Quantity">
+      </div>
 
     </div>
    <br>
-<button type="submit" class="btn btn-light">Add Item</button>
+    <button type="click" class="btn btn-light" id="add-item">Add Item</button>
   </form>
 
   <!--Footer-->
@@ -97,3 +98,5 @@
       © 2023 Copyright: Bottoms Up Distribution    </div>
     <!-- Copyright -->
   </footer>
+
+<script src="/js/itemManagement.js"></script>
