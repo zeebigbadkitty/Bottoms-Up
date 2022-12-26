@@ -30,3 +30,18 @@ body {
   margin-right: 50px;
   margin-left:50px;
 }
+
+.above {
+  background-color: rgb(18, 224, 18);
+  color: white;
+}
+
+.on{
+  background-color: orange;
+  color: white;
+}
+
+.below{
+  background-color: red;
+  color: white;
+}

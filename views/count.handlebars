@@ -1,0 +1,25 @@
+<div id="state" data-state="{{state}}"></div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Product ID</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Current Inventory</th>
+      <th scope="col">Par Level</th>
+      <th scope="col">Order Request</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each inventories as |inventory|}}
+        <tr class="status">
+          <th scope="row">{{inventory.id}}</th>
+          <td>{{inventory.product}}</td>
+          <td>{{inventory.quantity}}</td>
+          <td>{{inventory.par_min}}</td>
+          <td></td>
+        </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<script src="/js/count.js"></script>
