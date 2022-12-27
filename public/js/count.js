@@ -18,10 +18,10 @@ const checkProductStatus = () => {
     else {
       display[i].classList.add("below");
     }
-    console.log();
   }
 }
 
 if (state.length>0) {
   checkProductStatus();
 }
+
