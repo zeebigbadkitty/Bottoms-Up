@@ -4,6 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
+const nodemailer = require('nodemailer');
 
 //set up sequilize
 const sequelize = require('./config/connection');

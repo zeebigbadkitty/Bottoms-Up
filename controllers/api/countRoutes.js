@@ -1,8 +1,9 @@
 const router = require("express").Router();
 const { Inventory, User } = require('../../models');
 const withAuth = require('../../utils/auth');
+const sendEmail = require('../../utils/sendEmail');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     const inventoryData = await Inventory.findAll({
@@ -15,6 +16,7 @@ router.get('/', async (req, res) => {
     // create an array of par level and quantity level based on the ASC order
     const par_level = inventoryData.map((par) => par.par_min);
     const quantity_level = inventoryData.map((qty) => qty.quantity);
+    const product = inventoryData.map((product) => product.product);
     const state =[];
 
     // for loop to check inventory status
@@ -26,6 +28,7 @@ router.get('/', async (req, res) => {
           state[i] = 1;
         } else {
           state[i] = 0;
+          sendEmail(product[i]);
         }
       }
     }
