@@ -17,12 +17,13 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     const inventories = inventoryData.map((stock) => stock.get({ plain: true }));
-    
+
     // Pass serialized data and session flag into template
     res.render('inventory', { 
       layout: "main",
       inventories, 
-      loggedIn: req.session.loggedIn 
+      loggedIn: req.session.loggedIn,
+      userAdmin: req.session.userAdmin,
     });
   } catch (err) {
     res.status(500).json(err);
