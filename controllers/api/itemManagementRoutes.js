@@ -10,7 +10,8 @@ router.get('/', async (req, res) => {
     const categories = await sequelize.query("SELECT DISTINCT category FROM inventory", { type: QueryTypes.SELECT });
 
     res.render('item-management', {
-      logged_in: req.session.logged_in,
+      loggedIn: req.session.loggedIn,
+      userAdmin: req.session.userAdmin,
       categories,
     });
   } catch (err) {
