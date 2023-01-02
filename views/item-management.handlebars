@@ -1,8 +1,8 @@
   <!--Form Container-->
-  <div class="background-image">
-  <form class="form-inline">
-    <label class="my-4 mr-6" for="inlineFormCustomSelectPref">Category</label>
-    <select class="custom-select my-4 mr-sm-6" id="inlineFormCustomSelectPref">
+  <div class="item-management-background-image">
+  <form class="form-inline input-form">
+    <label class="" for="inlineFormCustomSelectPref">Category</label>
+    <select class="custom-select my-4 mr-sm-6" id="category-type">
       <option selected>Choose...</option>
       {{!-- <option value="1">Vodka</option>
       <option value="2">Gin</option>
@@ -10,6 +10,7 @@
       <option value="4">Tequila</option>
       <option value="3">Mezcal</option>
       <option value="3">Whiskey</option>
+
       <option value="3">Brandy</option> --}}
       {{#each categories as |category|}}
         <option id="category-name">{{category.category}}</option>
@@ -17,31 +18,35 @@
 
     </select></form>
   <form class="form">
+
     <div class="form-row">
 
-      <div class="form-group col-md-6">
-        <label>Product Name:</label>
-        <input type="text" id="product-name" class="form-control" placeholder="Product Name">
+      <div class="form-group col-md-6 input-group">
+        <label class="form-label">Product Name:</label>
+        <input type="text" id="product-name" class="width-150" placeholder="Enter Product Name">
       </div>
 
-      <div class="form-group col-md-6">
-        <label>Quantity On Hand:</label>
-        <input type="number" id="replyNumber" min="0" data-bind="value:replyNumber" class="form-control" placeholder="Enter Quantity">
+      <div class="form-group col-md-6 input-group">
+        <label class="form-label">Quantity On Hand:</label>
+        <input type="number" id="replyNumber" min="0" data-bind="value:replyNumber" class="width-150" placeholder="Enter Quantity">
       </div>
 
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-6 input-group">
         <label>Product Price:</label>
-        <input type="number" id="product-price" step="0.01" class="form-control" placeholder="Enter Price">
+
+        <input type="number" id="product-price" class="width-150" placeholder="Enter Price">
+
+
       </div>
 
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-6 input-group">
         <label>Minimum PAR level:</label>
-        <input type="number" id="product-par" class="form-control" placeholder="Minimum Quantity">
+        <input type="number" id="product-par" class="width-150" placeholder="Enter Minimum Quantity">
       </div>
 
     </div>
    <br>
-    <button type="click" class="btn btn-light" id="add-item">Add Item</button>
+    <button type="click" class="btn btn-light input-button" id="add-item">Add Item</button>
   </form>
 </div>
  
