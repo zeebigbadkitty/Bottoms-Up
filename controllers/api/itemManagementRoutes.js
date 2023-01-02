@@ -1,19 +1,26 @@
 const router = require("express").Router();
+const sequelize = require("../../config/connection");
 const { Inventory, User } = require('../../models');
 const withAuth = require('../../utils/auth');
+const { QueryTypes } = require('sequelize');
 
 // Go to item-management page
-router.get('/', (req, res) => {
-  res.render('item-management', {
-    logged_in: req.session.logged_in
-  });
+router.get('/', async (req, res) => {
+  try {
+    const categories = await sequelize.query("SELECT DISTINCT category FROM inventory", { type: QueryTypes.SELECT });
+
+    res.render('item-management', {
+      loggedIn: req.session.loggedIn,
+      userAdmin: req.session.userAdmin,
+      categories,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 // Create a new item in inventory 
 router.post('/', async (req, res) => {
-  console.log("Finally, I am here");
-  console.log(req.body);
-  console.log("emm...this is " + req.session.userId);
   try {
     const newItem = await Inventory.create({
       ...req.body,

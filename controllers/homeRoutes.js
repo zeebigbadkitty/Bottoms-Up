@@ -21,7 +21,8 @@ router.get('/', async (req, res) => {
     res.render('holdplease', { 
       layout: "main",
       inventory, 
-      loggedIn: req.session.loggedIn 
+      loggedIn: req.session.loggedIn,
+      userAdmin: req.session.userAdmin,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -49,7 +50,8 @@ router.get('/inventory/:id', async (req, res) => {
 
     res.render('inventory', {
       ...inventory,
-      loggedIn: req.session.loggedIn
+      loggedIn: req.session.loggedIn,
+      userAdmin: req.session.userAdmin,
     });
   } catch (err) {
     res.status(500).json(err);
