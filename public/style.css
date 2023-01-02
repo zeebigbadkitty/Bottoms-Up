@@ -14,6 +14,7 @@ body {
     #af8c69,
     #c9a580
   );
+  margin: 0;
 }
 
 .nav-item a:hover {
@@ -94,7 +95,7 @@ body {
   color: white;
 }
 
- /* in relation to the hero image */
+ /*----------------------- in relation to the hero image---------------------- */
 
  *, *::before, *::after {
   box-sizing: border-box;
@@ -174,3 +175,99 @@ body {
     right: 1rem;
   
   }
+  /* -------------------------------------------------------------------------- */
+
+  .login-background-image {
+  background-image: url("https://www.gbcib.com/assets/files/iiM7jyC0/hero_businessowner05.jpg");
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.register-background-image {
+  background-image: url("https://2486634c787a971a3554-d983ce57e4c84901daded0f67d5a004f.ssl.cf1.rackcdn.com/fall-line/media/heroimage-bar-60fafe6180f44.jpeg");
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-management-background-image {
+  background-image: url("https://rapidbarapp.com/wp-content/uploads/2020/12/How-to-manage-a-bar-inventory-.jpg");
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-form {
+  background-color: hsla(48, 9%, 10%, 0.6);
+  padding:  30px;
+  min-width: 400px;
+  }
+
+  
+  
+
+.input-title {
+  color: white;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  font-weight: normal
+}
+
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  color: white;
+  font-weight: lighter;
+  font-size: 1.5em;
+  margin-bottom: 7px
+}
+
+.input-group input {
+  font-size: 1.5em;
+  padding: .1em, .25em;
+  background-color: hsla(50, 4%, 27%, 0.3);
+  border: 1px solid hsl(50, 100%, 6%) ;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: lighter;
+}
+  
+.input-group input:focus {
+  border: 1px solid white
+}
+
+.input-button {
+  padding: 10px 30px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: hsla(50, 4%, 27%, 0.3);
+  border: 1px solid white;
+  outline: none;
+  font-size: 1.5em;
+  color: white;
+  font-weight: lighter;
+  margin-top: 20px;
+  cursor: pointer;
+}
+

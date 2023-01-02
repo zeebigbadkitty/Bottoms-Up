@@ -3,7 +3,7 @@ const newItem = async (event) => {
   event.preventDefault();
 
   // Collect values from the item management form
-  const category = 'Scotch';
+  const category = document.querySelector('#category-type').value.trim();
   const product = document.querySelector('#product-name').value.trim();
   const quantity = document.querySelector('#replyNumber').value.trim();
   const price = document.querySelector('#product-price').value.trim();
