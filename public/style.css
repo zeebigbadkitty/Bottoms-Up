@@ -178,7 +178,7 @@ body {
   /* -------------------------------------------------------------------------- */
 
   .login-background-image {
-  background-image: url("/public/assets/login.jpg");
+  background-image: url("/assets/login.jpg");
   background-position: center;
   width: 100vw;
   height: 100vh;
@@ -190,7 +190,7 @@ body {
 }
 
 .register-background-image {
-  background-image: url("/public/assets/register.jpeg");
+  background-image: url("/assets/register.jpeg");
   background-position: center;
   width: 100vw;
   height: 100vh;
@@ -201,7 +201,7 @@ body {
 }
 
 .item-management-background-image {
-  background-image: url("/public/assets/itemmanagement.jpg");
+  background-image: url("/assets/itemmanagement.jpg");
   background-position: center;
   width: 100vw;
   height: 100vh;
