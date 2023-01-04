@@ -11,11 +11,36 @@ module.exports = {
   
   choose_image: (categoryName) => {
     if(categoryName === "Whiskey"){
-      return `<img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(4).webp"
+      return `<img src="/assets/whiskey.png"
       class="w-100" />`
     }
     else if (categoryName === "Vodka"){
-      return `<img src="https://media.istockphoto.com/id/1289215387/photo/austin-congress-street-bridge-and-texas-capitol-building.jpg?s=612x612&w=0&k=20&c=y4l2u5CyDboGa0IJa3OPpcMIL5oOD_caaPbh4Sd9nsE="
+      return `<img src="/assets/vodka.png"
+      class="w-100" />`
+    }
+    else if (categoryName === "Gin"){
+      return `<img src="/assets/gin.png"
+      class="w-100" />`
+    }
+
+    else if (categoryName === "Tequila"){
+      return `<img src="/assets/tequila.png"
+      class="w-100" />`
+    }
+    else if (categoryName === "Mezcal"){
+      return `<img src="/assets/mezcal.png"
+      class="w-100" />`
+    }
+    else if (categoryName === "Brandy"){
+      return `<img src="/assets/brandy.png"
+      class="w-100" />`
+    }
+    else if (categoryName === "Rum"){
+      return `<img src="/assets/rum.png"
+      class="w-100" />`
+    }
+    else if (categoryName === "Scotch"){
+      return `<img src="/assets/scotch.png"
       class="w-100" />`
     }
   }
