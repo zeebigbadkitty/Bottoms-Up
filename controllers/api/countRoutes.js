@@ -38,6 +38,7 @@ router.get('/', withAuth, async (req, res) => {
       layout: "main",
       inventories, 
       loggedIn: req.session.loggedIn,
+      userAdmin: req.session.userAdmin,
       state
     });
   } catch (err) {

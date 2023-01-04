@@ -1,19 +1,24 @@
-
   <!--Form Container-->
   <div class="item-management-background-image">
   <form class="form-inline input-form">
     <label class="" for="inlineFormCustomSelectPref">Category</label>
     <select class="custom-select my-4 mr-sm-6" id="category-type">
       <option selected>Choose...</option>
-      <option value="1">Vodka</option>
+      {{!-- <option value="1">Vodka</option>
       <option value="2">Gin</option>
       <option value="3">Rum</option>
       <option value="4">Tequila</option>
       <option value="3">Mezcal</option>
       <option value="3">Whiskey</option>
-      <option value="3">Brandy</option>
-    </select>
-  
+
+      <option value="3">Brandy</option> --}}
+      {{#each categories as |category|}}
+        <option id="category-name">{{category.category}}</option>
+      {{/each}}
+
+    </select></form>
+  <form class="form">
+
     <div class="form-row">
 
       <div class="form-group col-md-6 input-group">
@@ -28,7 +33,10 @@
 
       <div class="form-group col-md-6 input-group">
         <label>Product Price:</label>
+
         <input type="number" id="product-price" class="width-150" placeholder="Enter Price">
+
+
       </div>
 
       <div class="form-group col-md-6 input-group">
