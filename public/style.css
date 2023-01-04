@@ -178,7 +178,7 @@ body {
   /* -------------------------------------------------------------------------- */
 
   .login-background-image {
-  background-image: url("https://www.gbcib.com/assets/files/iiM7jyC0/hero_businessowner05.jpg");
+  background-image: url("/public/assets/login.jpg");
   background-position: center;
   width: 100vw;
   height: 100vh;
@@ -190,7 +190,7 @@ body {
 }
 
 .register-background-image {
-  background-image: url("https://2486634c787a971a3554-d983ce57e4c84901daded0f67d5a004f.ssl.cf1.rackcdn.com/fall-line/media/heroimage-bar-60fafe6180f44.jpeg");
+  background-image: url("/public/assets/register.jpeg");
   background-position: center;
   width: 100vw;
   height: 100vh;
@@ -201,7 +201,7 @@ body {
 }
 
 .item-management-background-image {
-  background-image: url("https://rapidbarapp.com/wp-content/uploads/2020/12/How-to-manage-a-bar-inventory-.jpg");
+  background-image: url("/public/assets/itemmanagement.jpg");
   background-position: center;
   width: 100vw;
   height: 100vh;
