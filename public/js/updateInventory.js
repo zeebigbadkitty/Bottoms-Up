@@ -26,6 +26,8 @@ const updateInventory = async (event) => {
   }
 };
 
+
+
 document
   .querySelector('.update-quantity')
   .addEventListener('click', updateInventory);
