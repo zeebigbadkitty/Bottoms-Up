@@ -1,4 +1,10 @@
 <div id="state" data-state="{{state}}"></div>
+<div id="order-data" data-orderData="{{csvData}}"></div>
+
+{{#if state}}
+<button type="button" id="btnDownloadCsv">Download Order CSV Available</button>
+{{/if}}
+
 <table class="table">
   <thead>
     <tr>
