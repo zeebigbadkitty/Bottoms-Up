@@ -190,7 +190,7 @@ body {
 }
 
 .register-background-image {
-  background-image: url("/assets/register.jpeg");
+  background-image: url("/assets/register.png");
   background-position: center;
   width: 100vw;
   height: 100vh;
