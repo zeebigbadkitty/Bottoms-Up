@@ -1,5 +1,12 @@
 <div id="state" data-state="{{state}}"></div>
 <div class="table-spacing" style="margin-right: 100px; margin-bottom: 100px;"><table class="table">
+<div id="order-data" data-orderData="{{csvData}}"></div>
+
+{{#if state}}
+<button type="button" id="btnDownloadCsv">Download Order CSV Available</button>
+{{/if}}
+
+<table class="table">
   <thead>
     <tr>
       <th scope="col">Product ID</th>

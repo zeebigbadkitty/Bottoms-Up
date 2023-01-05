@@ -18,6 +18,7 @@ router.get('/', withAuth, async (req, res) => {
     const quantity_level = inventoryData.map((qty) => qty.quantity);
     const product = inventoryData.map((product) => product.product);
     const state =[];
+    let orderData = [];
 
     // for loop to check inventory status
     if ((par_level.length === quantity_level.length) && par_level.length > 0) {
@@ -29,17 +30,21 @@ router.get('/', withAuth, async (req, res) => {
         } else {
           state[i] = 0;
           sendEmail(product[i]);
+          orderData.push(inventories[i]);
         }
       }
     }
-
+    
+    const csvData = JSON.stringify(orderData);
+  
     // Pass serialized data and session flag into template
     res.render('count', { 
       layout: "main",
       inventories, 
       loggedIn: req.session.loggedIn,
       userAdmin: req.session.userAdmin,
-      state
+      state,
+      csvData
     });
   } catch (err) {
     res.status(500).json(err);
