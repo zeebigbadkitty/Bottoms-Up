@@ -1,6 +1,11 @@
 // Get data from count page
 const state = document.getElementById('state').getAttribute('data-state').split(',');
 const display = document.getElementsByClassName('status');
+const orderData = document.getElementById('order-data').getAttribute('data-orderData');
+const btnDownloadCsv = document.getElementById("btnDownloadCsv");
+const csvData = JSON.parse(orderData);
+const date = new Date();
+const currentDate = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+ date.getDate();
 
 // for loop to check inventory status
 // state === 2 => inventory status is above par
@@ -21,7 +26,22 @@ const checkProductStatus = () => {
   }
 }
 
+const downloadCsv = (filename, csvData) => {
+  const element = document.createElement("a");
+
+  element.setAttribute("href", `data:text/csv;charset=utf-8,${csvData}`);
+  element.setAttribute("download", filename);
+  element.style.display = "none";
+
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
+}
+
 if (state.length>0) {
   checkProductStatus();
 }
 
+btnDownloadCsv.addEventListener("click", () => {
+  downloadCsv(`Product Order Request ${currentDate}.csv`, json2csv.parse(csvData));
+});
