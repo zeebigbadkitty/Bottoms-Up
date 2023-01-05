@@ -98,7 +98,8 @@ a:hover {
   color: white;
 }
 a:hover {
-  color: #c9a580;
+  color: #ffd15b;
+  font-weight: bold;
 }
 a {
   color: #cf9c3a;
@@ -106,18 +107,24 @@ a {
 .btn-outline-danger {
   background-color: rgb(236, 148, 163);
   border: 2px solid red;
+  font-weight: bold;
 }
-.btn-outline-danger {
-  background-color: #7c5c3d;
-  border: 2px solid #be997a;
+.btn-outline-danger:hover{
+  background-color: #red;
+  border: 2px solid rgb(236, 148, 163);
+
 }
 .btn-light {
+  color:white;
   background-color: #be997a;
-  border: 2px solid #f1b441;
+  border: 2px solid #634628;
+  font-weight: bold;
 }
 .btn-light:hover {
+  color:white;
   background-color: #7c5c3d;
-  border: 2px solid #be997a;
+  border: 2px solid #ffd15b;
+
 }
 table {
   margin-left: 3em;
