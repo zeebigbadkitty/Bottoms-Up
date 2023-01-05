@@ -110,7 +110,7 @@ a {
   font-weight: bold;
 }
 .btn-outline-danger:hover{
-  background-color: #red;
+  background-color: red;
   border: 2px solid rgb(236, 148, 163);
 
 }
