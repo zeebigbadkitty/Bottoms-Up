@@ -32,10 +32,27 @@ const updateInventory = async (event) => {
   }
 };
 
+const deleteInventory = async (event) => {
+
+  if (event.target.hasAttribute('data-id')) {
+    const id = event.target.getAttribute('data-id');
+
+    const response = await fetch(`/api/inventory/${id}`, {
+      method: 'DELETE',
+    });
+
+    if (response.ok) {
+      document.location.replace('/api/inventory');
+    } else {
+      alert('Failed to delete inventory data');
+    }
+  }
+}
+
 document
   .getElementById('inventory-list')
   .addEventListener('click', (event) => {
-
+    
     const element = event.target.nodeName;
     const action = event.target.getAttribute('id');
 
@@ -43,5 +60,8 @@ document
       updateInventory(event);
     };
 
+    if(element == 'BUTTON' && action == 'delete'){
+      deleteInventory(event);
+    }
 
   });

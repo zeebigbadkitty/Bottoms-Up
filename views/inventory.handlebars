@@ -58,20 +58,22 @@
                       type="number"
                       placeholder="{{inventory.quantity}}"
                       class="form-input w-5px"
-                      id="new-quantity"
+                      id="{{inventory.id}}"
                     />
                   </div>
                   <div class="d-flex flex-column mt-4">
                     <button
                       class="btn btn-light update-quantity"
-                      type="submit"
+                      type="click"
                       data-id="{{inventory.id}}"
+                      id="update"
                     >Update</button>
                     <button
                       class="btn btn-outline-danger btn-sm mt-2"
-                      type="button"
-                    >
-                      Delete Item
+                      type="click"
+                      data-id="{{inventory.id}}"
+                      id="delete"
+                    >Delete Item
                     </button>
                   </div>
                 </div>
@@ -83,3 +85,6 @@
     </div>
   </section>
 {{/each}}
+</div>
+
+<script src="/js/updateInventory.js"></script>
