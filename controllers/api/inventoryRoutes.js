@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { Inventory, User } = require('../../models');
 const withAuth = require('../../utils/auth');
+const withAdmin = require('../../utils/admin');
 
 // Get all from inventory 
 router.get('/', async (req, res) => {
@@ -30,11 +31,15 @@ router.get('/', async (req, res) => {
   }
 });
 
-
 // Update quantity based on inventory id 
-router.put("/:id", withAuth, async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
+
   try {
-    const inventoryData = await Inventory.update(req.body, {
+    const inventoryData = await Inventory.update(
+      {
+        quantity: req.body.quantity,
+      },      
+      {
       where: {
         id: req.params.id,
       },
@@ -49,6 +54,27 @@ router.put("/:id", withAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+//Delete an inventory item
+router.delete('/:id', withAdmin, async (req, res) => {
+  try {
+    const inventoryData = await Inventory.destroy({
+      where: {
+        id: req.params.id,
+      },
+   })
+
+   if (!inventoryData) {
+    res.status(404).json({ message: 'No inventory product found with this id!' });
+    return;
+  }
+
+    res.status(200).json(inventoryData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+  
 });
 
 module.exports = router;
