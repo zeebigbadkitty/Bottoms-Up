@@ -422,3 +422,6 @@ body {
   opacity: .8;
 }
 
+.card {
+  width: 1000px;
+}
