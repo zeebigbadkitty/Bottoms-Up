@@ -4,15 +4,15 @@ const updateInventory = async (event) => {
   if (event.target.hasAttribute('data-id')) {
 
     // Collect data from user input
-    const quantity = document.querySelector('#new-quantity').value.trim();
     const id = event.target.getAttribute('data-id');
+    const quantity = document.getElementById(id).value;
 
     if (quantity >= 0){
       const response = await fetch(`/api/inventory/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
-          inventory_id: id,
-          quantity,
+          id: id,
+          quantity: quantity,
         }),
         headers: {
           "Content-Type": "application/json",
@@ -29,13 +29,19 @@ const updateInventory = async (event) => {
     if (quantity < 0){
       alert("Invalid quantity input, please try again");
     };
-    
   }
 };
 
-
-
 document
-  .querySelector('.update-quantity')
-  .addEventListener('click', updateInventory);
+  .getElementById('inventory-list')
+  .addEventListener('click', (event) => {
 
+    const element = event.target.nodeName;
+    const action = event.target.getAttribute('id');
+
+    if(element == 'BUTTON' && action == 'update'){
+      updateInventory(event);
+    };
+
+
+  });

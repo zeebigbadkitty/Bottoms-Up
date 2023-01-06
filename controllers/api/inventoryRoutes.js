@@ -30,11 +30,15 @@ router.get('/', async (req, res) => {
   }
 });
 
-
 // Update quantity based on inventory id 
-router.put("/:id", withAuth, async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
+  console.log("Quantity is here " +req.body.quantity);
   try {
-    const inventoryData = await Inventory.update(req.body, {
+    const inventoryData = await Inventory.update(
+      {
+        quantity: req.body.quantity,
+      },      
+      {
       where: {
         id: req.params.id,
       },
