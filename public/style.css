@@ -16,7 +16,20 @@ body {
   margin: 0;
   padding-bottom: 50px;
 }
-
+h1{
+  color: #ffd15b;
+  -webkit-text-stroke: 1px #000000;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #957452, 0 0 40px #957452, 0 0 50px #957452, 0 0 60px #957452, 0 0 70px #957452;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #957452, 0 0 40px #957452, 0 0 50px #957452, 0 0 60px #957452, 0 0 70px #957452, 0 0 80px #957452;
+  }}
 .nav-item a:hover {
   color: white;
   font-weight: bold;
@@ -26,7 +39,7 @@ body {
   display: block;
   height: 5px;
   width: 100px;
-  background-color: white;
+  background-color: #ffd15b;
   position: absolute;
   top: 0;
   width: 0;
@@ -75,6 +88,7 @@ body {
   margin-left: 50px;
 }
 .form-inline {
+  
   margin-right: 50px;
   margin-left: 50px;
 }
@@ -102,7 +116,7 @@ a:hover {
   font-weight: bold;
 }
 a {
-  color: #cf9c3a;
+  color: white;
 }
 .btn-outline-danger {
   background-color: rgb(236, 148, 163);
