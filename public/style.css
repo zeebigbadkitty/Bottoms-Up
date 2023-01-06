@@ -30,6 +30,14 @@ h1{
   to {
     text-shadow: 0 0 20px #fff, 0 0 30px #957452, 0 0 40px #957452, 0 0 50px #957452, 0 0 60px #957452, 0 0 70px #957452, 0 0 80px #957452;
   }}
+.navbar-toggler{
+  background-color: #be997a;
+  border: 1px solid #634628;
+}
+.navbar-toggler:hover{
+  background-color: #7c5c3d;
+  border: 1px solid #ffd15b;
+}
 .nav-item a:hover {
   color: white;
   font-weight: bold;
@@ -327,4 +335,14 @@ body {
 }
 ::placeholder {
   color: #faf0d8;
+}
+
+.navbar-nav{
+  float: right!important;
+  
+}
+.navbar-collapse{
+  z-index: 9;
+  background-color: #634628;
+  width: 100px;
 }
