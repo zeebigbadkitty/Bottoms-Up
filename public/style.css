@@ -1,11 +1,10 @@
- :root {
+:root {
   --mainfont: white;
-  --accent:  #c9a580;
+  --accent: #c9a580;
   --navlink: #7c5c3d;
 }
 
 body {
- 
   background-image: linear-gradient(
     to bottom,
     #634628,
@@ -15,22 +14,35 @@ body {
     #c9a580
   );
   margin: 0;
+  padding-bottom: 50px;
 }
-
+h1{
+  color: #ffd15b;
+  -webkit-text-stroke: 1px #000000;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #957452, 0 0 40px #957452, 0 0 50px #957452, 0 0 60px #957452, 0 0 70px #957452;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #957452, 0 0 40px #957452, 0 0 50px #957452, 0 0 60px #957452, 0 0 70px #957452, 0 0 80px #957452;
+  }}
 .nav-item a:hover {
   color: white;
   font-weight: bold;
 }
 .nav-item a::before {
-  content: '';
+  content: "";
   display: block;
   height: 5px;
   width: 100px;
-  background-color: white;
-  position:absolute;
+  background-color: #ffd15b;
+  position: absolute;
   top: 0;
   width: 0;
-  
 }
 
 #nav-item1 a:hover::before {
@@ -69,15 +81,16 @@ body {
 }
 .main-btns a {
   text-decoration: none;
-  color:#634628;
+  color: #634628;
 }
-.form{
+.form {
   margin-right: 50px;
-  margin-left:50px;
+  margin-left: 50px;
 }
-.form-inline{
+.form-inline {
+  
   margin-right: 50px;
-  margin-left:50px;
+  margin-left: 50px;
 }
 
 .above {
@@ -85,99 +98,144 @@ body {
   color: white;
 }
 
-.on{
+.on {
   background-color: orange;
   color: white;
 }
 
-.below{
+.below {
   background-color: red;
   color: white;
 }
+.text-center,
+a:hover {
+  color: white;
+}
+a:hover {
+  color: #ffd15b;
+  font-weight: bold;
+}
+a {
+  color: white;
+}
+.btn-outline-danger {
+  background-color: rgb(236, 148, 163);
+  border: 2px solid red;
+  font-weight: bold;
+}
+.btn-outline-danger:hover{
+  background-color: red;
+  border: 2px solid rgb(236, 148, 163);
 
- /*----------------------- in relation to the hero image---------------------- */
+}
+.btn-light {
+  color:white;
+  background-color: #be997a;
+  border: 2px solid #634628;
+  font-weight: bold;
+}
+.btn-light:hover {
+  color:white;
+  background-color: #7c5c3d;
+  border: 2px solid #ffd15b;
 
- *, *::before, *::after {
+}
+table {
+  margin-left: 3em;
+  margin-right: 3em;
+  text-align: center;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 0.4em;
+  text-align: center;
+}
+tr{
+  color:#c9a580;
+}
+
+/*----------------------- in relation to the hero image---------------------- */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    
-  }
-  
-  .carousel {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-  }
-  
-  .carousel > ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  .slide {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: 200ms opacity ease-in-out;
-    transition-delay: 200ms;
-    
-  }
+}
 
-  .slide > img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-  }
-  
-  .slide[data-active] {
-    opacity: 1;
-    z-index: 1;
-    transition-delay: 0ms;
-  }
-  
-  .carousel-button {
-    position: absolute;
-    z-index: 2;
-    background: none;
-    border: none;
-    font-size: 4rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(225, 225, 225, .5);
-    cursor: pointer;
-    border-radius: .25rem;
-    padding: 0 .5rem;
-    background-color: rgba(0, 0, 0, .1);
-  
-  }
-  
-  .carousel-button:hover, 
-  .carousel-button:focus {
-    color: white;
-    background-color: rgba (0, 0, 0, .2);
-  }
-  
-  .carousel-button:focus {
-    outline: 1px solid black;
-  }
-  
-  .carousel-button.prev {
-    left: 1rem;
-  }
-  
-  .carousel-button.next {
-    right: 1rem;
-  
-  }
-  /* -------------------------------------------------------------------------- */
+body {
+  margin: 0;
+}
 
-  .login-background-image {
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(225, 225, 225, 0.5);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba (0, 0, 0, 0.2);
+}
+
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+/* -------------------------------------------------------------------------- */
+
+.login-background-image {
   background-image: url("/assets/login.jpg");
   background-position: center;
   width: 100vw;
@@ -186,11 +244,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .register-background-image {
-  background-image: url("/assets/register.jpeg");
+  background-image: url("/assets/register.png");
   background-position: center;
   width: 100vw;
   height: 100vh;
@@ -201,7 +258,7 @@ body {
 }
 
 .item-management-background-image {
-  background-image: url("/assets/itemmanagement.jpg");
+  background-image: url("/assets/bartenders.png");
   background-position: center;
   width: 100vw;
   height: 100vh;
@@ -212,49 +269,47 @@ body {
 
 .input-form {
   background-color: hsla(48, 9%, 10%, 0.6);
-  padding:  30px;
+  color: #ffd15b;
+  padding: 30px;
   min-width: 400px;
-  }
-
-  
-  
+}
 
 .input-title {
-  color: white;
+  color: #ffd15b;
   text-align: center;
   margin: 0;
   margin-bottom: 40px;
   font-size: 2.5em;
-  font-weight: normal
+  font-weight: normal;
 }
 
-
 .input-group {
+  color: #ffd15b;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
 .input-group label {
-  color: white;
+  color: #ffd15b;
   font-weight: lighter;
   font-size: 1.5em;
-  margin-bottom: 7px
+  margin-bottom: 7px;
 }
 
 .input-group input {
   font-size: 1.5em;
-  padding: .1em, .25em;
+  padding: 0.1em, 0.25em;
   background-color: hsla(50, 4%, 27%, 0.3);
-  border: 1px solid hsl(50, 100%, 6%) ;
+  border: 1px solid hsl(60, 1%, 30%);
   outline: none;
   border-radius: 5px;
   color: white;
   font-weight: lighter;
 }
-  
+
 .input-group input:focus {
-  border: 1px solid white
+  border: 1px solid white;
 }
 
 .input-button {
@@ -270,4 +325,6 @@ body {
   margin-top: 20px;
   cursor: pointer;
 }
-
+::placeholder {
+  color: #faf0d8;
+}
