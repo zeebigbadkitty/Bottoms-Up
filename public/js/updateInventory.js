@@ -1,9 +1,10 @@
+// update inventory function
 const updateInventory = async (event) => {
   event.preventDefault();
 
   if (event.target.hasAttribute('data-id')) {
 
-    // Collect data from user input
+    // collect data from user input
     const id = event.target.getAttribute('data-id');
     const quantity = document.getElementById(id).value;
 
@@ -32,6 +33,7 @@ const updateInventory = async (event) => {
   }
 };
 
+// delete inventory function
 const deleteInventory = async (event) => {
 
   if (event.target.hasAttribute('data-id')) {
@@ -49,6 +51,7 @@ const deleteInventory = async (event) => {
   }
 }
 
+// event listener to differentiate delete and update
 document
   .getElementById('inventory-list')
   .addEventListener('click', (event) => {
@@ -61,7 +64,6 @@ document
     };
 
     if(element == 'BUTTON' && action == 'delete'){
-      deleteInventory(event);
+        deleteInventory(event);
     }
-
   });

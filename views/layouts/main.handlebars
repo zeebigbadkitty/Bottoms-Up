@@ -14,6 +14,7 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 
@@ -63,6 +64,13 @@
             <a class="nav-link" id = "logout" href="/">Log Out</a>
             {{/if}}
           </li>
+          
+          <li class="nav-item" id="nav-item7">
+            {{#if userAdmin}}
+            <a class="nav-link" href="/api/chart">Business Analysis</a>
+            {{/if}}
+          </li>
+
       </ul>
   </nav>
 </div> 
