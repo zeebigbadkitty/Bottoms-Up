@@ -1,3 +1,4 @@
+// directs us to the routes within the api folder
 const router = require('express').Router();
 
 const inventoryRoutes = require('./inventoryRoutes');

@@ -6,14 +6,14 @@
    ## User Story
    *As an owner of a bar 
 
-    *I want an app to easily manage inventory
-    *I want my employee be able to view, update the inventory
-    *I want my employee be able to view and export the result count as csv file
-    *I want the app automatically send alert email to me when the product is getting low
-    *I want the app automatically send order request email to my supplier
-    *I want the admin level user has the ability to delete an low demand product
-    *I want the admin level user has the ability to register new product
-    *I want the admin level user has the ability to view inventor vs sale to make smart decisions
+    *I want an app to easily manage inventory.
+    *I want my employee be able to view, update the inventory.
+    *I want my employee be able to view and export the result count as csv file.
+    *I want the app automatically send alert email to me when the product is getting low.
+    *I want the app automatically send an order request email to my supplier.
+    *I want the admin level user to have the ability to delete a low demand product.
+    *I want the admin level user to have the ability to register a new product.
+    *I want the admin level user to have the ability to view inventoyr vs sales, to make smart decisions.
 
   
   ## Table-of-contents
