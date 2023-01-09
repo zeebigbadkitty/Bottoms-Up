@@ -16,7 +16,7 @@ const signupFormHandler = async (event) => {
     email = "dummy@gmail.com";
     admin = false;
   }
-
+//check to make sure the user entered the correct password
   if (user_id && (password === validate)) {
 
     const response = await fetch('/api/users', {
@@ -24,7 +24,7 @@ const signupFormHandler = async (event) => {
       body: JSON.stringify({ user_id, password, admin, email }),
       headers: { 'Content-Type': 'application/json' },
     });
-
+//if good redirect to home
     if (response.ok) {
       document.location.replace('/');
     } else {

@@ -1,4 +1,6 @@
 const swiper = new Swiper(".swiper", {
+
+  //autoplay the slides to swap every 5 seconds
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
