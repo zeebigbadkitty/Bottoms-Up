@@ -4,13 +4,16 @@
   ![My Skills](https://skillicons.dev/icons?i=html,css,js,nodejs,bootstrap,express,mysql,heroku,github&theme=dark)
   
    ## User Story
-   *As an employee of a bar, 
+   *As an owner of a bar 
 
     *I want an app to easily manage inventory
-    *I want to view all inventory in a spreadsheet and export it to a csv file
-    *I want to be able to add and delete inventory
-    *I want to notify the admin if inventory is low via email
-    *I only want employees of the bar to be able to make any changes to the inventory. 
+    *I want my employee be able to view, update the inventory
+    *I want my employee be able to view and export the result count as csv file
+    *I want the app automatically send alert email to me when the product is getting low
+    *I want the app automatically send order request email to my supplier
+    *I want the admin level user has the ability to delete an low demand product
+    *I want the admin level user has the ability to register new product
+    *I want the admin level user has the ability to view inventor vs sale to make smart decisions
 
   
   ## Table-of-contents

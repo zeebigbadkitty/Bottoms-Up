@@ -64,6 +64,6 @@ document
     };
 
     if(element == 'BUTTON' && action == 'delete'){
-        deleteInventory(event);
+      deleteInventory(event);
     }
   });

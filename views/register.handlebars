@@ -24,10 +24,10 @@
 
           <label class="form-label">Add as Admin?</label>
           <input id="chk" type="checkbox" />
-<div class = "formContainer" hidden>
+          <div class = "formContainer" hidden>
           <div class= "form-outline mb-4 input-group" >
             <label class="form-label">Enter Email</label>
-            <input type="password" id="validate-signup" class="width-150" />
+            <input type="password" id="email-signup" class="width-150" />
           </div>
         </div>
 
@@ -53,4 +53,8 @@
           document.querySelector(".formContainer").hidden = !event.target.checked;
           console.log(!event.target.checked)
       });
+
+
+        const adminOn = document.querySelector('#chk').value.trim();
+                console.log(adminOn)
       </script>
