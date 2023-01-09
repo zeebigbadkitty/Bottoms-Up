@@ -32,7 +32,15 @@ User.init(
     user_admin: {
       type: DataTypes.BOOLEAN,
       defaultValue: false,
-    }
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: false,
+      validate: {
+        isEmail: true,
+      },
+    },
   },
   {
     hooks: {

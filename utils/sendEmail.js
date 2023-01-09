@@ -1,5 +1,4 @@
 const nodemailer = require('nodemailer');
-const router = require('express').Router();
 
 const sendEmail = (data) => {
 
@@ -16,16 +15,16 @@ const sendEmail = (data) => {
     const mail_configuration = {
       from: 'bottomsup20221226@gmail.com',
       to: 'bottomsup20221226@gmail.com',
-      subject:'Urgent! Product Order Request!',
-      text: `${data} is low, please order more`
+      subject:'Alert! Product Order Request!',
+      text: `${data} is getting low, please order more`
     }
 
     transporter.sendMail(mail_configuration, function(error, info){
       if(error){
-        console.log(error);
+
         return reject({message: 'An error has occurred'})
       }
-      return resolve({message:'Email sent successfully'})
+        return resolve({message:'Email sent successfully'})
     })
   }) 
 }

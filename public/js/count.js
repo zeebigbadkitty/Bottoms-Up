@@ -3,9 +3,9 @@ const state = document.getElementById('state').getAttribute('data-state').split(
 const display = document.getElementsByClassName('status');
 const orderData = document.getElementById('order-data').getAttribute('data-orderData');
 const btnDownloadCsv = document.getElementById("btnDownloadCsv");
-const csvData = JSON.parse(orderData);
 const date = new Date();
 const currentDate = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+ date.getDate();
+const csvData = JSON.parse(orderData);
 
 // for loop to check inventory status
 // state === 2 => inventory status is above par
@@ -26,6 +26,7 @@ const checkProductStatus = () => {
   }
 }
 
+// download csv function
 const downloadCsv = (filename, csvData) => {
   const element = document.createElement("a");
 
@@ -42,6 +43,7 @@ if (state.length>0) {
   checkProductStatus();
 }
 
+// event listener to download the file
 btnDownloadCsv.addEventListener("click", () => {
   downloadCsv(`Product Order Request ${currentDate}.csv`, json2csv.parse(csvData));
 });
