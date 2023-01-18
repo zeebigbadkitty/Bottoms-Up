@@ -14,7 +14,7 @@ const sendEmail = (data) => {
 
     const mail_configuration = {
       from: 'bottomsup20221226@gmail.com',
-      to: 'bottomsup20221226@gmail.com',
+      to: 'kyle_albright@hotmail.com',
       subject:'Alert! Product Order Request!',
       text: `${data} is getting low, please order more`
     }

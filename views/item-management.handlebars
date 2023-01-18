@@ -5,8 +5,10 @@
     <select class="custom-select form-select my-4 mr-sm-6" data-width="150px" id="category-type">
       <option selected>Choose...</option>
   
-      {{#each categories as |category|}}
-        <option id="category-name">{{category.category}}</option>
+      {{#each categories as | category |}}
+        <option id="category-name" value = {{category.category}}>{{category.category}}
+          
+        </option>
       {{/each}}
 
     </select></form>

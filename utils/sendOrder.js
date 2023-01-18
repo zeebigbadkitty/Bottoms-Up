@@ -57,7 +57,7 @@ const sendOrder = (data) => {
 
   const mail_configuration = {
     from: 'bottomsup20221226@gmail.com',
-    to: 'bottomsup20221226@gmail.com',
+    to: 'kyle_albright@hotmail.com',
     subject:`Bottoms Up Distribution Order Request ${currentDate}`,
     attachDataUrls: true,
     html: `
