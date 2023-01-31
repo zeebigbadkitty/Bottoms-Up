@@ -2,18 +2,13 @@
   <div class="item-management-background-image">
   <form class="form-inline input-form">
     <label class="" for="inlineFormCustomSelectPref">Category</label>
-    <select class="custom-select my-4 mr-sm-6" id="category-type">
+    <select class="custom-select form-select my-4 mr-sm-6" data-width="150px" id="category-type">
       <option selected>Choose...</option>
-      {{!-- <option value="1">Vodka</option>
-      <option value="2">Gin</option>
-      <option value="3">Rum</option>
-      <option value="4">Tequila</option>
-      <option value="3">Mezcal</option>
-      <option value="3">Whiskey</option>
-
-      <option value="3">Brandy</option> --}}
-      {{#each categories as |category|}}
-        <option id="category-name">{{category.category}}</option>
+  
+      {{#each categories as | category |}}
+        <option id="category-name" value = {{category.category}}>{{category.category}}
+          
+        </option>
       {{/each}}
 
     </select></form>
@@ -22,8 +17,8 @@
     <div class="form-row">
 
       <div class="form-group col-md-6 input-group">
-        <label class="form-label">Product Name:</label>
-        <input type="text" id="product-name" class="width-150" placeholder="Enter Product Name">
+        <label class="form-label ">Product Name:</label>
+        <input type="text" id="product-name" class="width-150 " placeholder="Enter Product Name">
       </div>
 
       <div class="form-group col-md-6 input-group">
@@ -46,7 +41,7 @@
 
     </div>
    <br>
-    <button type="click" class="btn btn-light input-button" id="add-item">Add Item</button>
+    <button type="click" class="btn btn-light input-button" id="add-item"><i class="fa-solid fa-plus"></i> Add Item</button>
   </form>
 </div>
  

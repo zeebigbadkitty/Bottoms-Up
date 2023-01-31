@@ -1,82 +1,4 @@
- {{!-- <section aria-label="Hero Images">
-    <div class = "carousel" data-carousel>
-    <button class="carousel-button prev" data-carousel-button = "prev">&#8249;</button>
-    <button class="carousel-button next" data-carousel-button = "next">&#8250;</button>
-    <ul data-slides>
-      
-      <li class = "slide" data-active>
-        <div class="d-flex min-vh-100" lc-helper="background" style="background:url(assets/banner.jpg)  center / cover no-repeat; background-color:#444; background-blend-mode: overlay;">
- 
-            <div class="align-self-center text-center text-light col-md-8 offset-md-2">
-              <div class="lc-block mb-4">
-                <div editable="rich">
-                  <h1 class="display-1 fw-bolder">View Inventory </h1>
-                </div>
-              </div>
-          
-              <div class="lc-block">
-                <div editable="rich">
-                  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.</p>
-          
-                  <p class="lead">Sim in vestibulum metus pulvinar sit amet.
-          
-                  </p>
-                 </div>
-              </div>
-             </div>
-          </div>
-      </li>
 
-      <li class = "slide">
-        <div class="d-flex min-vh-100" lc-helper="background" style="background:url(assets/bottles.jpg)  center / cover no-repeat; background-color:#444; background-blend-mode: overlay;">
- 
-            <div class="align-self-center text-center text-light col-md-8 offset-md-2">
-              <div class="lc-block mb-4">
-                <div editable="rich">
-                  <h1 class="display-1 fw-bolder">Add Items</h1>
-                </div>
-              </div>
-          
-              <div class="lc-block">
-                <div editable="rich">
-                  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.</p>
-          
-                  <p class="lead">Sim in vestibulum metus pulvinar sit amet.
-          
-                  </p>
-                 </div>
-              </div>
-             </div>
-          </div>
-        
-      </li>
-
-      <li class = "slide">
-        <div class="d-flex min-vh-100" lc-helper="background" style="background:url(assets/counting-inventory-behind-bar.jpg)  center / cover no-repeat; background-color:#444; background-blend-mode: overlay;">
- 
-            <div class="align-self-center text-center text-light col-md-8 offset-md-2">
-              <div class="lc-block mb-4">
-                <div editable="rich">
-                  <h1 class="display-1 fw-bolder">Item Management</h1>
-                </div>
-              </div>
-          
-              <div class="lc-block">
-                <div editable="rich">
-                  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.</p>
-          
-                  <p class="lead">Sim in vestibulum metus pulvinar sit amet.
-          
-                  </p>
-                 </div>
-              </div>
-             </div>
-          </div>alt = "image number 3">
-      </li>
-    </ul>
-  </div>
-  </section>
-  <script src="/js/pagination.js"></script> --}}
 
   <div class="container-fluid">
         <div class="swiper">
@@ -84,23 +6,29 @@
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide" >
-              <img src="../assets/bottles.jpg" />
-              <h1 class="centered1">View Inventory </h1>
-              <p class="centered2">Viewing your inventory couldn't be any easier!</p>
-              <p class="centered3">Color-coded forms let you know when you are running low on inventory, or are depleated.</p>
-              <p class="centered4"> Easily export to CSV to share with coworkers</p>
+              <img class = "hero-images" src="../assets/itemmanagement.jpg" />
+              <div class = "centered1 text-center">
+               <h1 class="display-1 fw-bolder">View Inventory </h1>
+              <p class="lead">Viewing your inventory couldn't be any easier!</p>
+              <p class="lead">Color-coded forms let you know when you are running low on inventory, or are depleated.</p>
+             <p class="lead"> Easily export to CSV to share with coworkers</p>
+              </div>
             </div>
             <div class="swiper-slide">
-              <img src="../assets/bartenders.PNG" />
-              <h1 class="centered1">Take Count </h1>
-              <p class="centered2">Easily take stock of what you have on hand or, receive shipments to add to inventory.</p>
-              <p class="centered3">When you are running low on stock, an email alert will be sent to your administrator.</p>
+               <img class = "hero-images" src="../assets/bottles.jpg" />
+               <div class = "centered1 text-center">
+               <h1 class="display-1 fw-bolder"> Take Count </h1>
+              <p class="lead">Easily take stock of what you have on hand or, receive shipments to add to inventory.</p>
+              <p class="lead">When you are running low on stock, an email alert will be sent to your administrator.</p>
+            </div>
             </div>
             <div class="swiper-slide">
-              <img src="../assets/counting-inventory-behind-bar.jpg" />
-              <h1 class="centered1">Item Management </h1>
-              <p class="centered2">Need to add a new spirit to your inventory? No problem!</p>
-              <p class="centered3">Your administrator can add new products to the inventory and easily set par levels.</p>
+               <img class = "hero-images" src="../assets/counting-inventory-behind-bar.jpg"/>
+               <div class = "centered1 text-center">
+               <h1 class="display-1 fw-bolder">Item Management </h1>
+              <p class="lead">Need to add a new spirit to your inventory? No problem!</p>
+              <p class="lead">Your administrator can add new products to the inventory and easily set par levels.</p>
+            </div>
             </div>
           </div>
           <!-- If we need pagination -->
@@ -118,7 +46,7 @@
     <script>
       const swiper = new Swiper(".swiper", {
         autoplay: {
-          delay: 5000,
+          delay: 3000,
           disableOnInteraction: false,
         },
 

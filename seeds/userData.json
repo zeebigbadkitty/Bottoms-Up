@@ -2,31 +2,25 @@
     {
       "user_id": "Admin",
       "password": "bottomsup12345",
-      "user_admin": true
+      "user_admin": true,
+      "email": "bottomsup20221226@gmail.com"
     },
     {
       "user_id": "sal",
       "password": "password12345",
-      "user_admin": false
+      "user_admin": false,
+      "email": "dummy@email.com"
     },
     {
       "user_id": "lernantino",
       "password": "password12345",
-      "user_admin": false
+      "user_admin": false,
+      "email": "dummy@email.com"
     },
     {
       "user_id": "amiko2k20",
       "password": "password12345",
-      "user_admin": false
+      "user_admin": false,
+      "email": "dummy@email.com"
     }
   ]
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  

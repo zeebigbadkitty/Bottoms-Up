@@ -56,6 +56,7 @@
                     <input
                       name="inventory-quantity"
                       type="number"
+                      min="0"
                       placeholder="{{inventory.quantity}}"
                       class="form-input w-5px"
                       id="{{inventory.id}}"
@@ -67,13 +68,13 @@
                       type="click"
                       data-id="{{inventory.id}}"
                       id="update"
-                    >Update</button>
+                    ><i class="fa-solid fa-pen-to-square"></i> Update</button>
                     <button
                       class="btn btn-outline-danger btn-sm mt-2"
                       type="click"
                       data-id="{{inventory.id}}"
                       id="delete"
-                    >Delete Item
+                    ><i class="fa-solid fa-trash"></i> Delete Item
                     </button>
                   </div>
                 </div>

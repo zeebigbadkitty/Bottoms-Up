@@ -3,10 +3,10 @@ const { Inventory, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 const withAdmin = require('../../utils/admin');
 
-// Get all from inventory 
+// get all from inventory 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
+    // get all projects and JOIN with user data
     const inventoryData = await Inventory.findAll({
       include: [
         {
@@ -16,10 +16,10 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    // Serialize data so the template can read it
+    // serialize data so the template can read it
     const inventories = inventoryData.map((stock) => stock.get({ plain: true }));
 
-    // Pass serialized data and session flag into template
+    // pass serialized data and session flag into template
     res.render('inventory', { 
       layout: "main",
       inventories, 
@@ -31,7 +31,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Update quantity based on inventory id 
+// update quantity based on inventory id 
 router.put('/:id', withAuth, async (req, res) => {
 
   try {

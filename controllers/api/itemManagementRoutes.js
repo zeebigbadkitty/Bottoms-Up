@@ -1,11 +1,10 @@
 const router = require("express").Router();
 const sequelize = require("../../config/connection");
 const { Inventory, User } = require('../../models');
-const withAuth = require('../../utils/auth');
 const withAdmin = require('../../utils/admin');
 const { QueryTypes } = require('sequelize');
 
-// Go to item-management page
+// raw query to return only distinct category value
 router.get('/', withAdmin, async (req, res) => {
   try {
     const categories = await sequelize.query("SELECT DISTINCT category FROM inventory", { type: QueryTypes.SELECT });
@@ -20,7 +19,7 @@ router.get('/', withAdmin, async (req, res) => {
   }
 });
 
-// Create a new item in inventory 
+// create a new item in inventory 
 router.post('/', withAdmin, async (req, res) => {
   try {
     const newItem = await Inventory.create({

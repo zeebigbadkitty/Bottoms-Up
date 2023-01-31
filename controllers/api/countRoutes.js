@@ -2,15 +2,16 @@ const router = require("express").Router();
 const { Inventory, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 const sendEmail = require('../../utils/sendEmail');
+const sendOrder = require('../../utils/sendOrder');
 
 router.get('/', withAuth, async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
+    // get all projects and JOIN with user data
     const inventoryData = await Inventory.findAll({
       order: [['quantity', 'ASC']],      
     });
 
-    // Serialize data so the template can read it
+    // serialize data so the template can read it
     const inventories = inventoryData.map((stock) => stock.get({ plain: true }));
 
     // create an array of par level and quantity level based on the ASC order
@@ -35,9 +36,14 @@ router.get('/', withAuth, async (req, res) => {
       }
     }
     
+    // prepare the data (when current quantity is below par level) for csv download
     const csvData = JSON.stringify(orderData);
+
+    if (orderData.length > 0){
+      sendOrder(csvData);
+    }
   
-    // Pass serialized data and session flag into template
+    // pass serialized data and session flag into template
     res.render('count', { 
       layout: "main",
       inventories, 

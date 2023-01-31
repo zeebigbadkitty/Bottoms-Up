@@ -32,9 +32,18 @@ User.init(
     user_admin: {
       type: DataTypes.BOOLEAN,
       defaultValue: false,
-    }
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: false,
+      validate: {
+        isEmail: true,
+      },
+    },
   },
   {
+    //salting and hashing the password
     hooks: {
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
