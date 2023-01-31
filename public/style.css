@@ -273,7 +273,7 @@ tr{
   cursor: pointer;
 }
 ::placeholder {
-  color: #0d0d0d;
+  color: #ffffff;
 }
 /* hamburger menu */
 .navbar-nav{
